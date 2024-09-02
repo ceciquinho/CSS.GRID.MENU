@@ -1,0 +1,29 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #00a2ff;
+  
+    display: flex;
+    flex-wrap: wrap;
+  
+    .coluna {
+      border: 1px solid #00a2ff;
+      box-sizing: border-box;
+  
+      flex-basis: 50%;
+  
+      &.coluna-3 {
+        flex-basis: 25%;
+  
+        @media (min-width: 768px) and (max-width: 1024px) {
+          flex-basis: 50%;
+        }
+        @media (max-width:768px){
+          flex-basis: 100%;
+        }
+      }
+      @media (max-width: 768px) {
+        flex-basis: 100%;
+      }
+    }
+  }
